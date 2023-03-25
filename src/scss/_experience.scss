@@ -1,0 +1,186 @@
+@import 'mixins';
+
+.experience {
+    width: 1140px;
+    margin: 120px auto 0;
+
+    &__subtitle {
+        position: relative;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+        margin-bottom: 6px;
+
+        &::before {
+            @include circle;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__title {
+        position: relative;
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        line-height: 60px;
+
+        &::after {
+            @include line;
+            left: 50%;
+            bottom: -25px;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__content {
+        margin-top: 85px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 136px;
+        padding: 0 89px 0 65px;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-top: 45px;
+
+                p {
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+
+    &__mini-title {
+        position: relative;
+        padding-left: 56px;
+
+        h4 {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 21px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 45px;
+                height: 0px;
+                border: 1px solid #000000;
+                left: -45px;
+                top: 18px
+            }
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+
+        &::before {
+            @include circle;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            min-height: 25px;
+            min-width: 25px;
+            background-repeat: no-repeat;
+            top: 15px;
+            left: 15px;
+        }
+    }
+
+    &__education {
+        li {
+            &:nth-child(1) {
+                .experience__mini-title {
+                    &::after {
+                        background-image: url('../assets/icons/University.svg');
+                        top: 14px;
+                        left: 17.61px;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                .experience__mini-title {
+                    &::after {
+                        background-image: url('../assets/icons/Courses.svg');
+                        top: 16px;
+                        left: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__work {
+        li {
+            &:nth-child(1) {
+                .experience__mini-title {
+                    &::after {
+                        background-image: url('../assets/icons//Developer.svg');
+                        top: 14px;
+                        left: 17px;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                .experience__mini-title {
+                    &::after {
+                        background-image: url('../assets/icons/Designer.svg');
+                        top: 15px;
+                        left: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__education, &__work {
+        position: relative;
+        padding-left: 43px;
+        height: min-content;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: calc(100% - 48px);
+            width: 0;
+            border: 1px solid #000000;
+            left: -2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            background: #FFA501;
+            border-radius: 100%;
+            top: 9px;
+            left: -9px;
+        }
+    }
+}

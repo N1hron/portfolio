@@ -1,0 +1,111 @@
+@import 'mixins';
+
+.about {
+    width: 1140px;
+    margin: 120px auto 0;
+    display: grid;
+    grid-template-columns: 400px 570px;
+    column-gap: 70px;
+    font-weight: 500;
+
+    &__info {
+        display: grid;
+        grid-template-rows: repeat(2, min-content);
+        row-gap: 40px;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__description {    
+        h2 {
+            position: relative;
+            font-weight: 700;
+            margin-bottom: 24px;
+            margin-top: 6px;
+            line-height: 60px;
+
+            &::after {
+                @include line;
+            }
+        }
+
+        p {
+            font-weight: 700;
+            font-size: 16px;
+            margin: 0;
+
+            &.about__description-text {
+                font-weight: 500;
+                font-size: 14px;
+            }
+
+            &.about__description-subtitle {
+                position: relative;
+                padding-left: 12px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    @include circle;
+                }
+            }
+        }
+    }
+
+    &__skills {
+        display: grid;
+        grid-template-columns: repeat(2, 260px);
+        grid-auto-rows: minmax(116px, auto);
+        column-gap: 50px;
+        row-gap: 20px;
+
+        h3 {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    &__skill {
+        position: relative;
+        padding-left: 60px;
+
+        &::before {
+            @include circle;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            min-height: 25px;
+            min-width: 25px;
+            background-image: url('../assets/icons/Web\ development.svg');
+            background-repeat: no-repeat;
+            top: 15px;
+            left: 15px;
+        }
+
+        &:nth-child(2) {
+            &::after {
+                background-image: url('../assets/icons/Mobile\ dev.svg');
+                top: 14px;
+                left: 18px;
+            }
+        }
+
+        &:nth-child(3) {
+            &::after {
+                background-image: url('../assets/icons/Design.svg');
+                top: 16px;
+                left: 15px;
+            }
+        }
+    }
+}

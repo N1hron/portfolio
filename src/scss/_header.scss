@@ -1,0 +1,101 @@
+@import 'mixins';
+
+.header {
+    min-height: 800px;
+    background-image: url('../assets/img/header_bg.jpg');
+    background-size: cover;
+    position: relative;
+
+    &__title {
+        
+        h1 {
+            font-weight: 700;
+            font-size: 48px;
+            margin-bottom: 36px;
+            line-height: 60px;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 16px;
+            padding-left: 10px;
+            margin-bottom: 3px;
+            position: relative;
+            z-index: 1;
+            min-height: 36px;
+            
+            &::before {
+                @include circle;
+            }
+        }
+    }
+
+    &__container {
+        width: 1140px;
+        margin: 0 auto;
+        padding: 206px 608px 362px 0px;
+    }
+
+    &__hamburger {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+
+    &__socials {
+        position: fixed;
+        top: 226px;
+        left: 54px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between ;
+        align-items: center;
+        width: 20px;
+        height: 338px;
+        z-index: 3;
+
+        p {
+            margin: 0;
+            height: 148px;
+            width: 20px;
+        }
+
+        span {
+            display: block;
+            width: 148px;
+            transform: rotate(-90deg) translate(-43%, -320%);
+            line-height: 20px;
+            margin-bottom: 0px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        &-link {
+            position: relative;
+            width: 20px;
+            height: 20px;
+
+            img {
+                position: absolute;
+                top: -2px;
+            }
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        height: 90px;
+    }
+
+    &__divider {
+        border: 1px solid #000000;
+        height: 70px;
+        width: 0;
+    }
+}

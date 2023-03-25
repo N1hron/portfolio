@@ -1,0 +1,33 @@
+{
+  "name": "portfolio_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browserslist": "last 2 versions",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.1",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rewrite-css": "^1.1.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.59.3",
+    "webpack": "^5.76.3",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
