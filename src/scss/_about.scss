@@ -1,12 +1,12 @@
 @import 'mixins';
 
 .about {
-    width: 1140px;
-    margin: 120px auto 0;
-    display: grid;
-    grid-template-columns: 400px 570px;
-    column-gap: 70px;
-    font-weight: 500;
+    .container {
+        display: grid;
+        grid-template-columns: 400px 570px;
+        column-gap: 70px;
+        font-weight: 500;
+    }
 
     &__info {
         display: grid;

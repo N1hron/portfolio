@@ -1,7 +1,3 @@
-* {
-    font-family: 'Poppins', sans-serif;
-}
-
 @import 'bootstrap-reboot.min';
 @import 'fonts';
 @import 'buttons';
@@ -9,6 +5,16 @@
 @import 'sidepanel';
 @import 'about';
 @import 'experience';
+@import 'skills';
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 1140px;
+    margin: 120px auto 0;
+}
 
 .overlay {
     position: fixed;

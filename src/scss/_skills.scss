@@ -1,0 +1,127 @@
+@import 'mixins';
+
+.skills {
+    &__subtitle {
+        position: relative;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 6px;
+
+        &::before {
+            @include circle;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__title {
+        position: relative;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: center;
+        margin: 0;
+
+        &::after {
+            @include line;
+            left: 50%;
+            bottom: -25px;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__content {
+        margin-top: 85px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-auto-rows: minmax(270px, auto);
+        gap: 13px;
+        padding: 0 11px 0 10px;
+    }
+
+    &__skill {
+        border: 1px solid #000;
+        padding: 29px 29px 24px 29px;
+        box-sizing: border-box;
+
+        h3 {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 21px;
+            margin-top: 23px;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        &-image-container {
+            min-height: 65px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__progress {
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-auto-rows: 70px;
+        column-gap: 45px;
+        row-gap: 30px;
+
+        &-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            p {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 21px;
+                margin: 0;
+                height: 36px;
+                padding-left: 13px;
+
+                &::before {
+                    @include circle;
+                }
+            }
+        }
+
+        &-percentage {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+        }
+
+        &-bar {
+            background: #E8E4DE;
+            border-radius: 4px;
+            height: 14px;
+            width: 100%;
+        }
+
+        &-fill {
+            background: #FFA501;
+            border-radius: 4px;
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}

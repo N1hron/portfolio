@@ -1,9 +1,6 @@
 @import 'mixins';
 
 .experience {
-    width: 1140px;
-    margin: 120px auto 0;
-
     &__subtitle {
         position: relative;
         font-weight: 700;
@@ -77,10 +74,11 @@
                 content: '';
                 position: absolute;
                 width: 45px;
-                height: 0px;
-                border: 1px solid #000000;
-                left: -45px;
-                top: 18px
+                height: 1px;
+                background-color: #000000;
+                left: -44px;
+                top: 18px;
+                z-index: -2;
             }
         }
 
@@ -164,9 +162,9 @@
             position: absolute;
             display: block;
             height: calc(100% - 48px);
-            width: 0;
-            border: 1px solid #000000;
-            left: -2px;
+            width: 1px;
+            background-color: #000;
+            left: -1px;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -179,8 +177,9 @@
             position: absolute;
             background: #FFA501;
             border-radius: 100%;
-            top: 9px;
-            left: -9px;
+            top: 10px;
+            left: -1px;
+            transform: translateX(-50%);
         }
     }
 }
