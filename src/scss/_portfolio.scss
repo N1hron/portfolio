@@ -1,0 +1,75 @@
+@import 'mixins'; 
+
+.portfolio {
+    &__subtitle {
+        position: relative;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 6px;
+
+        &::before {
+            @include circle;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__title {
+        position: relative;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: center;
+        margin: 0;
+
+        &::after {
+            @include line;
+            left: 50%;
+            bottom: -25px;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__items {
+        margin-top: 85px;
+        display: grid;
+        grid-template-columns: repeat(4, 280px);
+        grid-template-rows: repeat(2, 280px);
+        grid-template-areas: 
+        "first second third fourth"
+        "fifth sixth sixth fourth";
+        gap: 5px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    #first {
+        grid-area: first;
+    }
+
+    #second {
+        grid-area: second;
+    }
+
+    #fird {
+        grid-area: fird;
+    }
+
+    #fourth {
+        grid-area: fourth;
+    }
+
+    #fifth {
+        grid-area: fifth;
+    }
+
+    #sixth {
+        grid-area: sixth;
+    }
+}

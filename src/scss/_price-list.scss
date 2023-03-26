@@ -1,0 +1,82 @@
+@import 'mixins';
+
+.price-list {
+    .container {
+        padding: 0 50px;
+    }
+
+    &__title {
+        position: relative;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: center;
+        margin: 0;
+
+        &::before {
+            @include circle;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::after {
+            @include line;
+            left: 50%;
+            bottom: -30px;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__items {
+        margin-top: 91px;
+        display: grid;
+        grid-template-columns: repeat(2, 370px);
+        grid-template-rows: repeat(3, minmax(44px, auto));
+        row-gap: 15px;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 25px;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        &-name {
+            position: relative;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 21px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 15px;
+                height: 15px;
+                background-color: #FFA501;
+                border-radius: 100%;
+                left: -25px;
+                top: 3px;
+            }
+        }
+
+        &-price {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 21px;
+        }
+
+        &-description {
+            margin-top: 5px;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+    }
+}
