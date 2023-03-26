@@ -97,18 +97,17 @@
             width: 100%;
             border: 1px solid #000000;
             outline: none;
+            padding: 14px 20px 13px 20px;
         }
 
         input {
             height: 45px;
-            padding: 0 8px;
         }
 
         textarea {
             height: 100%;
             resize: none;
-            padding-top: 8px;
-            padding: 4px;
+            scrollbar-width: thin;
         }
 
         &-button {
