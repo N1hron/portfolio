@@ -8,12 +8,11 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 140px 0px 50px;
-
-    transform: translateX(-345px);
+    left: -345px;
     transition: transform 0.5s;
 
     &_active {
-        transform: translateX(0);
+        transform: translateX(345px);
     }
 
     &__close {
