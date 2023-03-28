@@ -9,6 +9,10 @@
         margin-bottom: 87px;
     }
 
+    p {
+        margin: 0;
+    }
+
     &__image {
         width: 100%;
         height: 100%;
@@ -100,6 +104,7 @@
             border: 1px solid #000000;
             outline: none;
             padding: 14px 20px 13px 20px;
+            box-sizing: border-box;
         }
 
         input {
@@ -114,6 +119,7 @@
 
         &-button {
             height: 45px;
+            min-width: 219px;
             width: 219px;
             background: #FFA501;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -131,7 +137,6 @@
     
         label {
             margin-left: 35px;
-            min-width: 311px;
             font-size: 12px;
             font-weight: 400;
             line-height: 18px;
@@ -139,6 +144,7 @@
     
         input {
             margin-right: 10px;
+            cursor: pointer;
         }
 
         a {
