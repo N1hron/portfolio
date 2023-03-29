@@ -6,8 +6,10 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
-        text-align: center;
-        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
 
         &::before {
             @include circle;
