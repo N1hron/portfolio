@@ -185,11 +185,11 @@
 
     .about {
         .container {
-            grid-template-rows: 300px auto;
+            grid-template-rows: 340px auto;
         }
 
         &__image {
-            object-fit: cover;
+            object-fit: contain;
         }
     }
 
@@ -326,6 +326,10 @@
 
                 a {
                     display: inline;
+                }
+
+                span {
+                    margin: 0;
                 }
             }
         }
