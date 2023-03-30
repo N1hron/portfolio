@@ -8,7 +8,7 @@
 
 @media (max-width: 1200px) {
     .container {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .header {
@@ -260,6 +260,10 @@
             &:after {
                 bottom: -11px;
             }
+        }
+
+        &__work {
+            margin-top: 40px;
         }
     }
 
