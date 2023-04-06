@@ -295,6 +295,10 @@
             grid-template-columns: minmax(auto, 300px);
         }
 
+        &__item-name {
+            max-width: 170px;
+        }
+
         &__title {
             &::after {
                 bottom: -21px;
